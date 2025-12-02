@@ -5,15 +5,64 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".InicioSesion">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+    <ImageView
+        android:id="@+id/imagen_fondo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="610dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@id/imagen_fondo"
+        app:layout_constraintEnd_toEndOf="@id/imagen_fondo"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@id/imagen_fondo"
+        app:layout_constraintTop_toTopOf="@id/imagen_fondo" />
+
+    <ImageView
+        android:id="@+id/cuadroiniciosesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cuadroiniciosesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/botoniniciarsesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Iniciar sesion"
+
+        app:layout_constraintEnd_toEndOf="@+id/cuadroiniciosesion"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toStartOf="@+id/cuadroiniciosesion"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <Button
+        android:id="@+id/botonregistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Registrar"
+        app:layout_constraintEnd_toEndOf="@+id/cuadroiniciosesion"
+        app:layout_constraintHorizontal_bias="0.763"
+        app:layout_constraintStart_toStartOf="@+id/cuadroiniciosesion"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
