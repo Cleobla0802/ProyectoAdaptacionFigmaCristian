@@ -1,68 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InicioSesion">
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
 
-
-    <ImageView
-        android:id="@+id/imagen_fondo"
-        android:layout_width="0dp"
+    <!-- Espacio superior -->
+    <View
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_weight="1" />
 
+    <!-- Logo centrado -->
     <ImageView
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="610dp"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="@id/imagen_fondo"
-        app:layout_constraintEnd_toEndOf="@id/imagen_fondo"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@id/imagen_fondo"
-        app:layout_constraintTop_toTopOf="@id/imagen_fondo" />
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
 
-    <ImageView
-        android:id="@+id/cuadroiniciosesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/cuadroiniciosesion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+    <!-- Cuadro decorativo -->
+    <FrameLayout
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:background="@drawable/cuadroiniciosesion"
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/botoniniciarsesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Iniciar sesion"
+        <!-- Botones en LinearLayout horizontal -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false"
+            android:layout_gravity="top">
 
-        app:layout_constraintEnd_toEndOf="@+id/cuadroiniciosesion"
-        app:layout_constraintHorizontal_bias="0.203"
-        app:layout_constraintStart_toStartOf="@+id/cuadroiniciosesion"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+            <!-- Botón Iniciar Sesión -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/red"
+                android:text="@string/iniciar_sesion"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
+                android:focusable="true" />
 
-    <Button
-        android:id="@+id/botonregistrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Registrar"
-        app:layout_constraintEnd_toEndOf="@+id/cuadroiniciosesion"
-        app:layout_constraintHorizontal_bias="0.763"
-        app:layout_constraintStart_toStartOf="@+id/cuadroiniciosesion"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+            <!-- Botón Registrar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRegister"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/light_grey"
+                android:text="@string/registrar"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true" />
 
+        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Contenedor de fragmentos -->
+        <FrameLayout
+            android:id="@+id/contenedorFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="64dp" />
+
+    </FrameLayout>
+
+    <!-- Espacio inferior -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
