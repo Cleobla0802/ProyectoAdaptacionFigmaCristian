@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Foto de perfil y nombre -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/logoperfil"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="José Luis Boa Salas"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
+
+    <!-- Opciones -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Información"
+            android:drawableStart="@drawable/iconousuario"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oscuro"
+            android:drawableStart="@drawable/iconomodooscuro"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacidad"
+            android:drawableStart="@drawable/candadoicono"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trabaja con nosotros"
+            android:drawableStart="@drawable/maletaicono"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Idioma"
+            android:drawableStart="@drawable/idiomaicono"
+            android:background="@android:color/transparent"
+            android:textColor="#000000"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Botón Cerrar Sesión -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar Sesión"
+            android:background="@drawable/button_red"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import es.iescarrillo.proyectoadaptacionfigmacristian.R;
-import es.iescarrillo.proyectoadaptacionfigmacristian.activities.HomeActivity;
+import es.iescarrillo.proyectoadaptacionfigmacristian.activities.*;
 
 public class LoginFragment extends Fragment {
 

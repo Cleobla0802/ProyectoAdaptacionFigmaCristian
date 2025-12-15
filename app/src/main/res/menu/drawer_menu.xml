@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_info" android:icon="@drawable/iconousuario" android:title="Información" />
+    <item android:id="@+id/nav_dark" android:icon="@drawable/iconomodooscuro" android:title="Oscuro" />
+    <item android:id="@+id/nav_privacy" android:icon="@drawable/candadoicono" android:title="Privacidad" />
+    <item android:id="@+id/nav_work" android:icon="@drawable/maletaicono" android:title="Trabaja con nosotros" />
+    <item android:id="@+id/nav_language" android:icon="@drawable/idiomaicono" android:title="Idioma" />
+    <item android:id="@+id/nav_logout" android:title="Cerrar Sesión" android:icon="@drawable/button_red" />
+</menu>
